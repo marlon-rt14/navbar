@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  color: white;
+}
+
+:root {
+  color-scheme: light dark;
+  --glass-color: rgba(255, 255, 255, 0.1);
+  --organge-color: #e66465;
+  --skin-color: #f9d9b8;
+  --purple-color: #4b038b;
+}
+
+header {
+  background-image: url("./lofi.webp");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--glass-color);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+ul {
+  flex: 3;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0 1rem;
+}
+
+li {
+  padding: 5px 13px;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+li::after {
+  content: "";
+  display: block;
+  transform: translateY(10px);
+  left: 0;
+  margin: auto;
+  width: 0%;
+  height: 2px;
+  background-color: var(--skin-color);
+  transition: width 0.3s;
+}
+
+li:hover::after {
+  width: 100%;
+  transform: translate(0, 10px);
+}
+
+li:hover {
+  cursor: pointer;
+  transform: scaleX(1.2);
+  transition: transform 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-cont-actions {
+  flex: 1;
+  display: grid;
+  place-content: center;
+}
+
+.nav-cont-actions button {
+  padding: 8px 12px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--organge-color), var(--skin-color));
+  font-weight: 600;
+  border: none;
+  outline: none;
+  transition: transform 0.3s;
+}
+
+.nav-cont-actions button:hover {
+  cursor: pointer;
+  transform: scaleX(1.2);
+}
+
+.container-info {
+  display: grid;
+  place-content: center;
+}
+
+.container-info div {
+  background-color: var(--glass-color);
+  background: linear-gradient(45deg, #e6646555, #4b038b55);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  scale: 1.5;
+  margin-top: 12rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
