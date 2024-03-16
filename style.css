@@ -102,12 +102,12 @@ a {
   transform: scaleX(1.2);
 }
 
-.container-info {
+.header-container-info {
   display: grid;
   place-content: center;
 }
 
-.container-info div {
+.header-container-info div {
   background-color: var(--glass-color);
   background: linear-gradient(45deg, #e6646555, #4b038b55);
   backdrop-filter: blur(10px);
